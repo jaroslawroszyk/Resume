@@ -1,18 +1,31 @@
 name: Build LaTeX CV
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write 
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/Jaroslaw_Roszyk_CV.tex
-          compiler: xelatex 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+          compiler: xelatex
+          args: "-jobname=Jaroslaw_Roszyk_CV -pdf -xelatex"
+
+      - name: Create or Update Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: CV_PDF
-          path: src/Jaroslaw_Roszyk_CV.pdf
+          tag_name: latest
+          name: Latest Build
+          files: src/Jaroslaw_Roszyk_CV.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

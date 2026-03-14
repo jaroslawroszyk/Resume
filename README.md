@@ -5,7 +5,7 @@
 Source code for my CV, typeset in LaTeX.
 
 ## 📄 Latest Version
-[**Download CV in PDF**](link_do_pliku_lub_latest_release)
+[**Download CV in PDF**](https://github.com/jaroslawroszyk/Resume/releases/download/latest/Jaroslaw_Roszyk_CV.pdf)
 
 ## 🛠 Tech Stack (CV Source)
 - **Engine:** XeLaTeX / LuaLaTeX
