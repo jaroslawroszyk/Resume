@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Moderncv themes
+\moderncvstyle{classic} 
+\moderncvcolor{blue} 
+
+% Adjust the page margins
+\usepackage[scale=0.75, top=2cm, bottom=2cm]{geometry}
+
+% Fix for the date column width to prevent wrapping (e.g. for "2024 -- Present")
+\setlength{\hintscolumnwidth}{3.2cm}
+
+% Personal data
+\name{Jarosław}{Roszyk}
+\title{Software Engineer | Rust \& C++ Specialist}
+\address{Wrocław, Poland}{}
+\phone[mobile]{+48~xxx~xxx~xxx}
+\email{roszyk.jarek@gmail.com}
+\social[linkedin]{jaroslaw-roszyk-3a6887184}
+\social[github]{jaroslawroszyk}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+\babelfont{rm}{Noto Sans}
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\begin{document}
+\makecvtitle
+
+\section{About Me}
+\cvitem{}{Experienced Software Engineer specializing in high-performance system programming with \textbf{Rust and C++}. Proven track record in developing mission-critical \textbf{5G and 6G infrastructure}, distributed systems, and open-source contributions such as \textbf{Apache Iggy}. Actively expanding into core Rust ecosystem development, aiming to contribute to \textbf{rust-analyzer, Clippy, and rust-lang}. Currently leading architectural decisions and building next-generation \textbf{6G components at Nokia}. Outside of work, I am an avid sport climber and mountain runner.}
+
+\section{Experience}
+\subsection{Nokia}
+\cventry{Jan 2025 -- Present}{Engineer, 6G Software Development}{Nokia}{Wrocław}{}{
+\begin{itemize}
+    \item \textbf{6G Control Plane:} Leading the design and implementation of next-generation 6G components with a focus on ultra-high performance and scalability.
+    \item \textbf{Architectural Ownership:} Taking ownership of critical system modules and making key architectural choices for the upcoming 6G ecosystem.
+    \item \textbf{Rust Quality \& Mentoring:} Acting as a dedicated code reviewer and safeguarding Rust code quality across teams; mentoring engineers in idiomatic Rust.
+    \item \textbf{Advanced Implementation:} Leveraging async Rust (Tokio) and low-level optimizations for future-ready telecommunications.
+    \item \textbf{Ecosystem Contribution:} Actively working towards contributions in core Rust tooling (rust-analyzer, Clippy).
+\end{itemize}}
+
+\cventry{Nov 2021 -- Present}{Engineer, 5G Software Development}{Nokia}{Wrocław}{}{
+\begin{itemize}
+    \item \textbf{C-Plane Development:} Developed and maintained high-performance Rust components for 5G Base Station software on Linux systems.
+    \item \textbf{Distributed Messaging:} Integrated ZeroMQ-based communication and optimized protocol handling using Protobuf.
+    \item \textbf{CI/CD \& Automation:} Created internal tools (Python, Bash, Docker) that significantly improved developer workflows.
+    \item \textbf{System Stability:} Took ownership of high-impact Rust modules, ensuring system stability through rigorous testing and code safety.
+\end{itemize}}
+
+\section{Education}
+\cventry{2024 -- Present}{Master's Degree in Artificial Intelligence/ML}{Uniwersytet Merito}{Wrocław}{}{Thesis: \textit{Application of machine learning methods for automatic detection of CLIP-IN safety zones on climbing walls.}}
+\cventry{2021 -- 2024}{Bachelor in Cloud Application Development}{Uniwersytet Merito}{Wrocław}{}{Thesis: \textit{Implementation and Efficiency Analysis of Communication Protocols in Distributed Systems Using Redis, ZeroMQ, and Protobuf.}}
+
+\newpage 
+
+\section{Technical Skills}
+\cvitem{Languages}{\textbf{Rust (Advanced, Async, Tokio)}, C++, Python, Bash, SQL, TypeScript}
+\cvitem{Tools}{Docker, CI/CD, Linux, ZeroMQ, Redis, gRPC, CMake, Protobuf, Git}
+\cvitem{Practices}{Clean Code, SOLID, Unit \& Integration Testing, Agile/Scrum}
+
+\section{Open Source \& Projects}
+\cvitem{Rust Ecosystem}{Active contributor to core Rust tooling, including \textbf{rust-lang (compiler)}, \textbf{Clippy}, and \textbf{rust-analyzer}. Focused on improving diagnostics and developer experience.}
+
+\cvitem{Master's Thesis Project}{Developing a computer vision system using \textbf{YOLOv11} and \textbf{Faster R-CNN} to automate safety monitoring on climbing walls. Focus on real-time object detection and comparative analysis of deep learning vs. classical methods (HOG+SVM).}
+
+\cvitem{Apache Iggy}{Contributed to the development of a Rust-based distributed system for real-time event streaming. Focused on performance, reliability, and asynchronous data processing using Tokio and Protobuf.}
+
+\cvitem{Bachelor's Thesis}{Designed and implemented a distributed server-client application to analyze the efficiency of communication protocols (\textbf{Redis, ZeroMQ, Protobuf}). Focused on high concurrency and asynchronous networking in Rust.}
+
+\cvitem{VS Code Extension}{Developed a \textbf{TypeScript} extension for log highlighting with case-insensitive matching and customizable colors to improve debugging efficiency.}
+
+\end{document}
